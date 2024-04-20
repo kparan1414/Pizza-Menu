@@ -3,5 +3,14 @@ export default function Footer() {
   const isOpen = hours >= 12 && hours <= 22;
   console.log(isOpen);
 
-  return <footer>{new Date().toLocaleTimeString()}.Footer Text</footer>;
+  return (
+    <footer className="footer">
+      {isOpen && (
+        <div className="order">
+          <p>Come visit us or order online</p>
+          <button className="btn">Order now</button>
+        </div>
+      )}
+    </footer>
+  );
 }

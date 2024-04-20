@@ -54,7 +54,6 @@ function App() {
       <Header />
       <Menu data={data} />
       <Footer />
-      <button>Order now</button>
     </div>
   );
 }

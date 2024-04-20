@@ -1,19 +1,13 @@
-export default function Pizza({
-  name,
-  ingredients,
-  price,
-  photoName,
-  soldOut,
-}) {
+export default function Pizza({ pizzaData }) {
   return (
-    <div className="pizza">
-      <img width={"200px"} src={photoName} alt={name} />
+    <li className="pizza">
+      <img width={"200px"} src={pizzaData.photoName} alt={pizzaData.name} />
       <div>
-        <h3>{name}</h3>
-        <p>{ingredients}</p>
-        <p>{price}</p>
-        <p>{soldOut}</p>
+        <h3>{pizzaData.name}</h3>
+        <p>{pizzaData.ingredients}</p>
+        <p>{pizzaData.price}</p>
+        <p>{pizzaData.soldOut}</p>
       </div>
-    </div>
+    </li>
   );
 }
