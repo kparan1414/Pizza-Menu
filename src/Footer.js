@@ -5,11 +5,13 @@ export default function Footer() {
 
   return (
     <footer className="footer">
-      {isOpen && (
+      {isOpen ? (
         <div className="order">
           <p>Come visit us or order online</p>
           <button className="btn">Order now</button>
         </div>
+      ) : (
+        <p>We're closed now! Come back later between 12:00 & 22:00</p>
       )}
     </footer>
   );
